@@ -1,14 +1,14 @@
-import React from 'react';
-
-const Cart = (props) => {
-    
+import React, { useState } from 'react';
+import './Cart.css'
+const Cart = (props) => {  
     // const {name , handleButton }= props;
-    console.log(props.cart);
-
+const {name ,price ,randomGenerate} = props.bike;
+    // console.log(props.bike);
+    
     return (
-        <div>
-            <h2>Cart Section </h2>
-            {/* <h2>Hello {name}</h2> */}
+        <div  className= 'cart-items' >
+            <h2>{name} </h2> <br />
+            <h4>{price}</h4>
         </div>
     );
 };
