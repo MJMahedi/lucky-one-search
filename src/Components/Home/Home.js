@@ -4,8 +4,8 @@ import Product from '../Product/Product';
 import './Home.css'
 const Home = () => {
     const [products , setProducts] = useState([]);
-
     const [cart , setCart] =useState([]);
+    const [show , setShow ] = useState([]);
     useEffect(() =>{
         fetch('data.json')
         .then(res => res.json())
@@ -20,11 +20,17 @@ const Home = () => {
         // console.log(newCart , 'select');
         setCart(newCart);
     }
-    const randomGenerate = (bike) =>{
+    const randomGenerate = () =>{
         
         let x = Math.floor((Math.random() * cart.length) + 1);
-        console.log(x);
-        document.getElementById("selected-item").innerHTML = setCart[x];
+       
+         const res = cart[x];
+         console.log(res.name);
+        //  console.log(res);
+        // console.log(newCart);
+        document.getElementById("selected-item").innerHTML = res.name; 
+        // setShow(res);
+        
         
     }
     const clear = () =>{
@@ -49,7 +55,7 @@ const Home = () => {
                 <h2> Cart Item : {cart.length}</h2>   
                 <div className='selected-item' id='selected-item'>
                 {
-                    cart.map(bike => <Cart key= {bike.id} cart= {cart} bike={bike} ></Cart>  )
+                    cart.map(bike => <Cart key= {bike.id} show= {show}  cart= {cart} bike={bike} ></Cart>  )
                 }
                     </div>             
                               
