@@ -22,7 +22,7 @@ It Can set default values inside Component.
 It Can change inside Component.
 It cannot change in child Components.
 
-#UseState :
+# UseState :
 useState is a Hook that allows us to have state variables in functional components. Under the hood, React keeps track of these state variables and ensures they stay up-to-date on subsequent re-renders of the component.We can pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value.
 
 
