@@ -2,7 +2,7 @@
 React is a flexible , efficient , oen-source JavaScript library for building user interface(UI). It is a collection of a vanila javascript code wherether we use it to make website, application or desktop application User interface.Usually components created by pure javascript code & REACT convert it to HTML code for UI .Then this HTML code inject it by REACT DOM to html page & this process work it without loading full page.This is how react works
 
 
-#Props Vs State 
+# Props Vs State 
 #Props
 Props can get initial value from parent Component.
 Props can be changed by parent Component.
@@ -10,7 +10,7 @@ It Can set default values inside Component.
 It Cannot change inside Component.
 It can change in child Components.
 
-#State
+# State
 
 State can get initial value from parent Component.
 State cannot be changed by parent Component.
